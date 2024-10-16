@@ -1,0 +1,33 @@
+
+data.head()  # Top 5 rows
+data.tail()  # Bottom 5 rows
+data.sample(5)  # Random sample of 5 rows
+
+data.info()  # Summary of DataFrame
+data.describe()  # Descriptive statistics for numeric columns
+data.describe(include='all')  # Descriptive statistics for all columns
+data.shape  # Shape of DataFrame (rows, columns)
+
+data.columns  # Get column names
+
+data.isnull()  # Check for missing values (True/False)
+data.isnull().sum()  # Count of missing values in each column
+
+data.dtypes  # Data types of each column
+data.select_dtypes(include=['float64', 'int64'])  # Select numeric columns
+data.select_dtypes(include=['object'])  # Select string/categorical columns
+
+
+data.duplicated()  # Check for duplicated rows
+data.drop_duplicates()  # Remove duplicated rows
+
+data['column_name'].value_counts()  # Count of unique values in a column
+
+data['column_name'].nunique()  # Number of unique values in a column
+data['column_name'].unique()  # List of unique values in a column
+
+data['column_name'].apply(lambda x: x * 2)  # Apply function to column
+
+data.drop('column_name', axis=1)  # Drop a column
+data.dropna()  # Remove rows with missing values
+data.fillna(0)  # Fill missing values with 0
